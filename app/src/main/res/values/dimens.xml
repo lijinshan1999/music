@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--工具栏图片的宽高-->
+    <dimen name="toolBarIcon_width">30dp</dimen>
+    <dimen name="toolBarIcon_height">30dp</dimen>
+</resources>
