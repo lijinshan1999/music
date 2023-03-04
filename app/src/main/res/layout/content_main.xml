@@ -6,6 +6,7 @@
 
     <!--上面的工具栏-->
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbars"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/bulueTheme">
@@ -81,6 +82,7 @@
         android:layout_height="800dp">
 
         <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_content"
             android:layout_width="match_parent"
             android:layout_height="550dp"
             android:descendantFocusability="blocksDescendants" />
@@ -88,7 +90,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@color/colorWhite"
-            android:layout_marginTop="550dp"
+            android:layout_marginTop="500dp"
             android:descendantFocusability="afterDescendants">
 
             <TextView

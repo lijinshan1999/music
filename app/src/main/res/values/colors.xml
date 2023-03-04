@@ -8,6 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="colorGray">#f5f5f5</color>
+    <color name="colorBlue">#008df2</color>
 
     <color name="bulueTheme">#008df2</color>
 
@@ -19,4 +20,7 @@
 
     <!--正文文字颜色-->
     <color name="colorContent">#333333</color>
+
+    <!--标题文字颜色-->
+    <color name="colorBlack">#000000</color>
 </resources>
