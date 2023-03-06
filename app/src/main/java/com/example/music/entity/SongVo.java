@@ -7,7 +7,6 @@ public class SongVo {
 
     private String name;
     private String id;
-
     private ArrayList<SongInfoArray> ar;
 
     public SongVo(String name, String id, ArrayList<SongInfoArray> ar) {
@@ -57,7 +56,7 @@ public class SongVo {
                 '}';
     }
 
-    public class SongInfoArray {
+    public static class SongInfoArray {
         private String name;
         private String id;
 

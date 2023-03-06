@@ -20,10 +20,12 @@ import com.music.R;
 
 import java.util.List;
 
-public class SongListDetailAdapter extends BaseAdapter {
+public class SongListDetailAdapter extends BaseAdapter implements View.OnClickListener {
 
     private final List<SongVo> songList;
     private final Context mContext;
+
+    public InnerItemOnclickListener mListener;
 
     public SongListDetailAdapter(Context context, int detail_song_item, List<SongVo> songVos) {
         this.mContext = context;
@@ -33,12 +35,12 @@ public class SongListDetailAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 1;
+        return songList.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return position;
+        return songList.get(position);
     }
 
     @Override
@@ -49,9 +51,8 @@ public class SongListDetailAdapter extends BaseAdapter {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        System.out.println(songList);
         ViewHolder viewHolder;
-        if (convertView == null){
+        if (convertView == null) {
             viewHolder = new ViewHolder();
             //获取布局文件detail_song_item的根视图
             convertView = LayoutInflater.from(mContext).inflate(R.layout.detail_song_item, null);
@@ -65,9 +66,10 @@ public class SongListDetailAdapter extends BaseAdapter {
         }
 
         viewHolder.song_name.setText(songList.get(position).getName());
-        viewHolder.singer_album.setText((CharSequence) songList.get(position).getAr().get(0));
-        viewHolder.count.setText(String.valueOf(position + "1"));
-
+        viewHolder.singer_album.setText(String.valueOf(songList.get(position).getAr().get(0).getName()));
+        viewHolder.count.setText(String.valueOf(position + 1));
+        viewHolder.song_operate.setOnClickListener(this);
+        viewHolder.song_operate.setTag(position);
 
         return convertView;
     }
@@ -80,6 +82,18 @@ public class SongListDetailAdapter extends BaseAdapter {
 
     }
 
+    @Override
+    public void onClick(View v) {
+        mListener.itemClick(v);
+    }
+
+    public interface InnerItemOnclickListener {
+        void itemClick(View view);
+    }
+
+    public void setInnerItemOnclickListener(InnerItemOnclickListener Listener) {
+        this.mListener = Listener;
+    }
 }
 
 
