@@ -6,6 +6,7 @@ import androidx.lifecycle.HasDefaultViewModelProviderFactory;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -24,8 +25,10 @@ import android.widget.TextView;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.example.music.adapter.SongListDetailAdapter;
+import com.example.music.entity.Song;
 import com.example.music.entity.SongListVO;
 import com.example.music.entity.SongVo;
+import com.example.music.singleton.PlayingSongList;
 import com.example.music.util.URL2BitmapUtil;
 import com.music.R;
 
@@ -55,12 +58,19 @@ public class SongListDetailActivity extends AppCompatActivity implements Adapter
     private View songpopupView;
     private int currentPosition;
     private PopupWindow songpopupWindow;
-
+    private List<Song> songList = new ArrayList<>();
+    private PlayingSongList playingSongList = PlayingSongList.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_song_list_detail);
+
+        if (Build.VERSION.SDK_INT >= 21){
+            View decorView = getWindow().getDecorView();
+            decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+            getWindow().setStatusBarColor(Color.TRANSPARENT);
+        }
 
         handler = new Handler();
         show = new Runnable() {
@@ -75,12 +85,21 @@ public class SongListDetailActivity extends AppCompatActivity implements Adapter
         songListID = getIntent().getStringExtra("songListID");
         songListVO = (SongListVO) getIntent().getSerializableExtra("songListVOS");
 
-        System.out.println("上个Intent传过来的数据：" + songListVO);
-
         ImageView songlist_cover = findViewById(R.id.songlist_cover);
         TextView songlist_name = findViewById(R.id.songlist_name);
         TextView user_name = findViewById(R.id.user_name);
         songListView = findViewById(R.id.songlist_detail_list_view);
+
+        ImageView comment_btn = findViewById(R.id.comment_btn);
+        comment_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SongListDetailActivity.this,SongListCommentActivity.class);
+                intent.putExtra("songListID",songListID);
+                startActivity(intent);
+                overridePendingTransition(R.anim.mid_bottom_slide_in, R.anim.fade_out);
+            }
+        });
 
         try {
             songlist_cover.setImageBitmap(URL2BitmapUtil.getBitmap(songListVO.getCoverImgUrl()));
@@ -169,12 +188,19 @@ public class SongListDetailActivity extends AppCompatActivity implements Adapter
             }
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-
                 songVos.clear();
 
                 String songs = JSONObject.parseObject(response.body().string()).get("songs").toString();
                 List<SongVo> song= JSON.parseArray(songs, SongVo.class);
-
+                for (int i=0;i<song.size();i++){
+                    Song s = new Song();
+                    s.setSongID(song.get(i).getId());
+                    s.setSongName(song.get(i).getName());
+                    s.setSingerID(song.get(i).getAr().get(0).getId());
+                    s.setSingerName(song.get(i).getAr().get(0).getName());
+                    s.setSongImage(song.get(i).getAl().getPicUrl());
+                    songList.add(s);
+                }
                 songVos.addAll(song);
 
                 Looper.prepare();
@@ -182,7 +208,6 @@ public class SongListDetailActivity extends AppCompatActivity implements Adapter
                 Looper.loop();
             }
         });
-
 
     }
 
@@ -199,9 +224,12 @@ public class SongListDetailActivity extends AppCompatActivity implements Adapter
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+        playingSongList.InitPlayingSongList(songList,songVos.get(position).getId(),position);
         Intent intent = new Intent(this,PlayerActivity.class);
         intent.putExtra("songID",songVos.get(position).getId());
         intent.putExtra("songName",songVos.get(position).getName());
+        intent.putExtra("songer",songVos.get(position).getAr().get(0).getName());
+        intent.putExtra("option","");
         startActivity(intent);
         overridePendingTransition(R.anim.mid_bottom_slide_in, R.anim.fade_out);
     }

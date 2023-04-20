@@ -8,7 +8,8 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbars"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
         android:background="@color/bulueTheme">
         <RelativeLayout
             android:layout_width="match_parent"
@@ -79,106 +80,105 @@
     <FrameLayout
         android:id="@+id/fragment"
         android:layout_width="match_parent"
-        android:layout_height="800dp">
+        android:layout_height="0dp"
+        android:layout_weight="8">
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/vp_content"
             android:layout_width="match_parent"
-            android:layout_height="550dp"
+            android:layout_height="wrap_content"
             android:descendantFocusability="blocksDescendants" />
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="@color/colorWhite"
-            android:layout_marginTop="500dp"
-            android:descendantFocusability="afterDescendants">
-
-            <TextView
-                android:id="@+id/tv_bottm_player"
-                android:layout_width="220dp"
-                android:layout_height="60dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:textColor="@color/colorContent"
-                android:textSize="16sp"/>
-            
-            <ImageView
-                android:id="@+id/song_cover"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:src="@drawable/disc"
-                android:layout_marginLeft="4dp"/>
-
-            <TextView
-                android:id="@+id/song_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="65dp"
-                android:layout_marginTop="10dp"
-                android:textColor="@color/colorContent"
-                android:textSize="16sp"
-                android:text="Love Story"/>
-
-            <TextView
-                android:id="@+id/singer_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="65dp"
-                android:layout_marginTop="34dp"
-                android:text="taylor Swift"
-                android:textSize="12sp" />
-
-            <ImageView
-                android:id="@+id/play_btn"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginEnd="100dp"
-                android:layout_marginTop="18dp"
-                android:src="@drawable/play"/>
-
-            <ImageView
-                android:id="@+id/next_play_btn"
-                android:layout_width="27dp"
-                android:layout_height="27dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginEnd="55dp"
-                android:layout_marginTop="17dp"
-                android:src="@drawable/next_play"/>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:background="@color/colorGray" />
-
-            <ImageView
-                android:id="@+id/songlist_operate"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="10dp"
-                android:src="@drawable/manage_playlist" />
-
-        </RelativeLayout>
-
-
 
     </FrameLayout>
-    
-    
-    
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+        android:descendantFocusability="afterDescendants">
+
+        <TextView
+            android:id="@+id/tv_bottm_player"
+            android:layout_width="220dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/colorContent"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:id="@+id/song_cover"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/disc"
+            android:layout_marginLeft="4dp"/>
+
+        <TextView
+            android:id="@+id/song_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorContent"
+            android:textSize="16sp"
+            android:text="Love Story"/>
+
+        <TextView
+            android:id="@+id/singer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="34dp"
+            android:text="taylor Swift"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/play_btn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="100dp"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/play"/>
+
+        <ImageView
+            android:id="@+id/next_play_btn"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="55dp"
+            android:layout_marginTop="17dp"
+            android:src="@drawable/next_play"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorGray" />
+
+        <ImageView
+            android:id="@+id/songlist_operate"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/manage_playlist" />
+
+    </RelativeLayout>
     
     
     

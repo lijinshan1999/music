@@ -8,6 +8,22 @@ public class SongVo {
     private String name;
     private String id;
     private ArrayList<SongInfoArray> ar;
+    private Al al;
+
+    public Al getAl() {
+        return al;
+    }
+
+    public void setAl(Al al) {
+        this.al = al;
+    }
+
+    public SongVo(String name, String id, ArrayList<SongInfoArray> ar, Al al) {
+        this.name = name;
+        this.id = id;
+        this.ar = ar;
+        this.al = al;
+    }
 
     public SongVo(String name, String id, ArrayList<SongInfoArray> ar) {
         this.name = name;
@@ -53,6 +69,7 @@ public class SongVo {
                 "name='" + name + '\'' +
                 ", id='" + id + '\'' +
                 ", ar=" + ar +
+                ", al=" + al +
                 '}';
     }
 
@@ -93,6 +110,31 @@ public class SongVo {
             return "SongInfoArray{" +
                     "name='" + name + '\'' +
                     ", id='" + id + '\'' +
+                    '}';
+        }
+    }
+    public static class Al{
+        private String picUrl;
+
+        public Al() {
+        }
+
+        public Al(String picUrl) {
+            this.picUrl = picUrl;
+        }
+
+        public String getPicUrl() {
+            return picUrl;
+        }
+
+        public void setPicUrl(String picUrl) {
+            this.picUrl = picUrl;
+        }
+
+        @Override
+        public String toString() {
+            return "Al{" +
+                    "picUrl='" + picUrl + '\'' +
                     '}';
         }
     }

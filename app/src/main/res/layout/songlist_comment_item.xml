@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout   xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:descendantFocusability="afterDescendants">
+
+    <com.example.music.view.ImageViewCircle
+        android:id="@+id/comment_imageHead"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        app:srcCompat="@drawable/user_image" />
+
+    <TextView
+        android:id="@+id/comment_nickname"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorContent"
+        android:text="Anonymous"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/comment_datetime"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="30dp"
+        android:text="2023-3-10"
+        android:textSize="12sp" />
+
+
+    <TextView
+        android:id="@+id/comment_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:textColor="@color/colorContent"
+        android:text="我静静听了很久，电脑睡眠了，看电影的室友也睡了，泡脚的水也凉了，凉到脚没知觉，桌上一杯热咖啡也是凉的，月亮很冷，可我此时只是想静静听歌，就连窗外的蛐蛐歌声也不愿听到，只是想闭着眼睛，听着我喜欢的歌，时不时哭一次，没有任何意义，没有任何感触，不是莫名其妙，世界总是美好的。"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="50dp"/>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="55dp"
+
+        android:background="@color/colorGray"
+        />
+</RelativeLayout>

@@ -124,7 +124,7 @@ public class FindMusicFragment extends Fragment implements View.OnClickListener 
         recommend_songlist_image5 = findmusicView.findViewById(R.id.recommend_songlist_image5);
         recommend_songlist_image6 = findmusicView.findViewById(R.id.recommend_songlist_image6);
 
-        ImageView recommend_song_btn = findmusicView.findViewById(R.id.IM1); //每日推荐
+        ImageView recommend_song_btn = findmusicView.findViewById(R.id.IV1); //每日推荐
         recommend_song_btn.setOnClickListener(this);
         recommend_songlist_image1.setOnClickListener(this);
         recommend_songlist_image2.setOnClickListener(this);
@@ -167,7 +167,7 @@ public class FindMusicFragment extends Fragment implements View.OnClickListener 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.IM1:  //每日推荐
+            case R.id.IV1:  //每日推荐
 
                 break;
             case R.id.recommend_songlist_image1:

@@ -1,134 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView   xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <RelativeLayout
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
             android:id="@+id/tool_div"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentStart="true"
             android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp">
-            <ImageView
-                android:id="@+id/IM1"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/download"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="25dp"/>
 
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/download"
-                android:layout_alignTop="@+id/IM1"
-                android:layout_toEndOf="@+id/IM1"
-                android:layout_marginStart="45dp"/>
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/download"
-                android:layout_centerHorizontal="true"
-                android:layout_alignTop="@+id/IM1" />
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/download"
-                android:layout_alignTop="@+id/IM1"
-                android:layout_toStartOf="@+id/IM2"
-                android:layout_marginEnd="45dp"/>
-
-            <ImageView
-                android:id="@+id/IM2"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/download"
-                android:layout_alignTop="@+id/IM1"
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="20dp"/>
-
-            <TextView
-                android:id="@+id/TM1"
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/IM1"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="8dp"
-                android:text="每日推荐"
-                android:textSize="16sp"
-                android:textColor="@color/colorContent"/>
+                android:layout_weight="1">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/TM1"
-                android:layout_toEndOf="@+id/TM1"
-                android:layout_marginStart="25dp"
-                android:text="歌手"
-                android:textSize="16sp"
-                android:textColor="@color/colorContent"/>
+                <ImageView
+                    android:id="@+id/IV1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/download" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_alignTop="@+id/TM1"
-                android:text="排行榜"
-                android:textSize="16sp"
-                android:textColor="@color/colorContent"/>
+                <TextView
+                    android:id="@+id/TM1"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/IV1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:text="每日推荐"
+                    android:textColor="@color/colorContent"
+                    android:textSize="16sp" />
+            </RelativeLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/TM1"
-                android:layout_toStartOf="@+id/TM2"
-                android:layout_marginEnd="27dp"
-                android:text="乐库"
-                android:textSize="16sp"
-                android:textColor="@color/colorContent"/>
+                android:layout_weight="1">
 
-            <TextView
-                android:id="@+id/TM2"
-                android:layout_width="wrap_content"
+                <ImageView
+                    android:id="@+id/IV2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/download" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/IV2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:text="歌手"
+                    android:textColor="@color/colorContent"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/TM1"
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="3dp"
-                android:text="听歌识曲"
-                android:textSize="16sp"
-                android:textColor="@color/colorContent"/>
-        </RelativeLayout>
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/IV3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/download" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/IV3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:text="排行榜"
+                    android:textColor="@color/colorContent"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/IV4"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/download" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/IV4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:text="乐库"
+                    android:textColor="@color/colorContent"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/IV5"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/download" />
+
+                <TextView
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/IV5"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:text="听歌识曲"
+                    android:textColor="@color/colorContent"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </LinearLayout>
 
         <ImageView
-            android:id="@+id/line"
             android:layout_width="match_parent"
             android:layout_height="6dp"
             android:layout_below="@+id/tool_div"
-            android:layout_marginTop="15dp"
             android:background="#FAFAFA" />
 
         <RelativeLayout
-            android:id="@+id/recommend_songlist_div"
-            android:layout_below="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recommend_songlist_div"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="10dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp">
 
             <TextView
                 android:id="@+id/recommend_songlist_title"
@@ -136,164 +157,203 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:text="推荐歌单"
-                android:textSize="20sp"
-                android:textColor="@color/colorContent"/>
+                android:textColor="@color/colorContent"
+                android:textSize="20sp" />
 
             <ImageView
                 android:id="@+id/recommend_songlist_more"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_alignParentEnd="true"
-                android:layout_alignTop="@+id/recommend_songlist_title"
                 android:layout_marginEnd="5dp"
                 app:srcCompat="@drawable/more" />
-
-            <ImageView
-                android:id="@+id/recommend_songlist_image1"
-                android:layout_width="127dp"
-                android:layout_height="127dp"
-                android:src="@drawable/songlist1"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/recommend_songlist_title"
-                android:layout_marginTop="15dp"/>
-
-            <ImageView
-                android:id="@+id/recommend_songlist_image2"
-                android:layout_width="127dp"
-                android:layout_height="127dp"
-                android:src="@drawable/songlist2"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@+id/recommend_songlist_title"
-                android:layout_marginTop="15dp"/>
-
-            <ImageView
-                android:id="@+id/recommend_songlist_image3"
-                android:layout_width="127dp"
-                android:layout_height="127dp"
-                android:src="@drawable/songlist3"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@+id/recommend_songlist_title"
-                android:layout_marginTop="15dp"/>
-
-            <TextView
-                android:id="@+id/recommend_songlist_text1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/recommend_songlist_image1"
-                android:layout_alignEnd="@+id/recommend_songlist_image1"
-                android:layout_below="@+id/recommend_songlist_image1"
-                android:layout_marginTop="5dp"
-                android:layout_marginStart="3dp"
-                android:layout_marginEnd="3dp"
-                android:text="每日为你精选好歌"
-                android:textSize="16sp"
-                android:textColor="@color/colorContent"/>
-
-            <TextView
-                android:id="@+id/recommend_songlist_text2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/recommend_songlist_image2"
-                android:layout_alignEnd="@+id/recommend_songlist_image2"
-                android:layout_below="@+id/recommend_songlist_image2"
-                android:layout_marginTop="5dp"
-                android:layout_marginStart="3dp"
-                android:layout_marginEnd="3dp"
-                android:text="每日为你精选好歌"
-                android:textSize="16sp"
-                android:textColor="@color/colorContent"/>
-            <TextView
-                android:id="@+id/recommend_songlist_text3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/recommend_songlist_image3"
-                android:layout_alignEnd="@+id/recommend_songlist_image3"
-                android:layout_below="@+id/recommend_songlist_image3"
-                android:layout_marginTop="5dp"
-                android:layout_marginStart="3dp"
-                android:layout_marginEnd="3dp"
-                android:text="每日为你精选好歌"
-                android:textSize="16sp"
-                android:textColor="@color/colorContent"/>
-
-            <ImageView
-                android:id="@+id/recommend_songlist_image4"
-                android:layout_width="127dp"
-                android:layout_height="127dp"
-                android:src="@drawable/songlist4"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/recommend_songlist_title"
-                android:layout_marginTop="198dp"/>
-
-            <ImageView
-                android:id="@+id/recommend_songlist_image5"
-                android:layout_width="127dp"
-                android:layout_height="127dp"
-                android:src="@drawable/songlist5"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@+id/recommend_songlist_title"
-                android:layout_marginTop="198dp"/>
-            <ImageView
-                android:id="@+id/recommend_songlist_image6"
-                android:layout_width="127dp"
-                android:layout_height="127dp"
-                android:src="@drawable/songlist6"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@+id/recommend_songlist_title"
-                android:layout_marginTop="198dp"/>
-
-            <TextView
-                android:id="@+id/recommend_songlist_text4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/recommend_songlist_image4"
-                android:layout_alignEnd="@+id/recommend_songlist_image4"
-                android:layout_below="@+id/recommend_songlist_image4"
-                android:layout_marginTop="5dp"
-                android:layout_marginStart="3dp"
-                android:layout_marginEnd="3dp"
-                android:text="每日为你精选好歌"
-                android:textSize="16sp"
-                android:textColor="@color/colorContent"/>
-
-            <TextView
-                android:id="@+id/recommend_songlist_text5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/recommend_songlist_image5"
-                android:layout_alignEnd="@+id/recommend_songlist_image5"
-                android:layout_below="@+id/recommend_songlist_image5"
-                android:layout_marginTop="5dp"
-                android:layout_marginStart="3dp"
-                android:layout_marginEnd="3dp"
-                android:text="每日为你精选好歌"
-                android:textSize="16sp"
-                android:textColor="@color/colorContent"/>
-            <TextView
-                android:id="@+id/recommend_songlist_text6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/recommend_songlist_image6"
-                android:layout_alignEnd="@+id/recommend_songlist_image6"
-                android:layout_below="@+id/recommend_songlist_image6"
-                android:layout_marginTop="5dp"
-                android:layout_marginStart="3dp"
-                android:layout_marginEnd="3dp"
-                android:text="每日为你精选好歌"
-                android:textSize="16sp"
-                android:textColor="@color/colorContent"/>
-
         </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/recommend_songlist_div"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/recommend_songlist_image1"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/songlist1"/>
+                <TextView
+                    android:id="@+id/recommend_songlist_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/recommend_songlist_image1"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="3dp"
+                    android:text="每日为你精选好歌"
+                    android:lines="2"
+                    android:ellipsize="end"
+                    android:textColor="@color/colorContent"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/recommend_songlist_image2"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/songlist1"/>
+                <TextView
+                    android:id="@+id/recommend_songlist_text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/recommend_songlist_image2"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="3dp"
+                    android:text="每日为你精选好歌"
+                    android:lines="2"
+                    android:ellipsize="end"
+                    android:textColor="@color/colorContent"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/recommend_songlist_image3"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/songlist1"/>
+                <TextView
+                    android:id="@+id/recommend_songlist_text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/recommend_songlist_image3"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="3dp"
+                    android:text="每日为你精选好歌"
+                    android:lines="2"
+                    android:ellipsize="end"
+                    android:textColor="@color/colorContent"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/recommend_songlist_image4"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/songlist1"/>
+                <TextView
+                    android:id="@+id/recommend_songlist_text4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/recommend_songlist_image4"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="3dp"
+                    android:text="每日为你精选好歌"
+                    android:lines="2"
+                    android:ellipsize="end"
+                    android:textColor="@color/colorContent"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/recommend_songlist_image5"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/songlist1"/>
+                <TextView
+                    android:id="@+id/recommend_songlist_text5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/recommend_songlist_image5"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="3dp"
+                    android:text="每日为你精选好歌"
+                    android:lines="2"
+                    android:ellipsize="end"
+                    android:textColor="@color/colorContent"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/recommend_songlist_image6"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/songlist1"/>
+                <TextView
+                    android:id="@+id/recommend_songlist_text6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/recommend_songlist_image6"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="3dp"
+                    android:text="每日为你精选好歌"
+                    android:lines="2"
+                    android:ellipsize="end"
+                    android:textColor="@color/colorContent"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
         <RelativeLayout
             android:id="@+id/recommend_singer_div"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/recommend_songlist_div"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="10dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="30dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_marginEnd="10dp">
 
             <TextView
                 android:id="@+id/recommend_singer_title"
@@ -301,15 +361,15 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:text="热门单曲"
-                android:textSize="20sp"
-                android:textColor="@color/colorContent"/>
+                android:textColor="@color/colorContent"
+                android:textSize="20sp" />
 
             <ImageView
                 android:id="@+id/recommend_singer_more"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:layout_alignParentEnd="true"
                 android:layout_alignTop="@+id/recommend_singer_title"
+                android:layout_alignParentEnd="true"
                 android:layout_marginEnd="5dp"
                 app:srcCompat="@drawable/more" />
 
@@ -317,79 +377,81 @@
                 android:id="@+id/recommend_song_image1"
                 android:layout_width="107dp"
                 android:layout_height="107dp"
-                android:src="@drawable/singer"
+                android:layout_below="@+id/recommend_singer_title"
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="5dp"
-                android:layout_below="@+id/recommend_singer_title"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="15dp"
+                android:src="@drawable/singer" />
 
             <ImageView
                 android:id="@+id/recommend_song_image2"
                 android:layout_width="107dp"
                 android:layout_height="107dp"
-                android:src="@drawable/singer"
-                android:layout_centerHorizontal="true"
                 android:layout_below="@+id/recommend_singer_title"
-                android:layout_marginTop="15dp"/>
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/singer" />
+
             <ImageView
                 android:id="@+id/recommend_song_image3"
                 android:layout_width="107dp"
                 android:layout_height="107dp"
-                android:src="@drawable/singer"
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="5dp"
                 android:layout_below="@+id/recommend_singer_title"
-                android:layout_marginTop="15dp"/>
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/singer" />
 
             <TextView
                 android:id="@+id/recommend_song_text1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/recommend_song_image1"
                 android:layout_alignStart="@+id/recommend_song_image1"
                 android:layout_alignEnd="@+id/recommend_song_image1"
-                android:layout_below="@+id/recommend_song_image1"
-                android:layout_marginTop="5dp"
                 android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="0dp"
                 android:gravity="center"
                 android:text="王菲"
-                android:textSize="14sp"
-                android:textColor="@color/colorContent"/>
+                android:textColor="@color/colorContent"
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/recommend_song_text2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/recommend_song_image2"
-                android:layout_marginTop="5dp"
                 android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
                 android:text="王菲"
-                android:textSize="14sp"
-                android:textColor="@color/colorContent"/>
+                android:textColor="@color/colorContent"
+                android:textSize="14sp" />
+
             <TextView
                 android:id="@+id/recommend_song_text3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/recommend_song_image3"
                 android:layout_alignStart="@+id/recommend_song_image3"
                 android:layout_alignEnd="@+id/recommend_song_image3"
-                android:layout_below="@+id/recommend_song_image3"
-                android:layout_marginTop="5dp"
                 android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="0dp"
-                android:text="王菲"
-                android:textSize="14sp"
                 android:gravity="center"
-                android:textColor="@color/colorContent"/>
+                android:text="王菲"
+                android:textColor="@color/colorContent"
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/recommend_song_count1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/recommend_song_image1"
                 android:layout_alignStart="@+id/recommend_song_image1"
                 android:layout_alignEnd="@+id/recommend_song_image1"
-                android:layout_below="@+id/recommend_song_image1"
-                android:layout_marginTop="25dp"
                 android:layout_marginStart="35dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginEnd="30dp"
                 android:text="291.5万"
                 android:textSize="10sp" />
@@ -399,34 +461,37 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/recommend_song_image2"
-                android:layout_marginTop="25dp"
                 android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
                 android:text="327.9万"
                 android:textSize="10sp" />
+
             <TextView
                 android:id="@+id/recommend_song_count3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/recommend_song_image3"
                 android:layout_alignStart="@+id/recommend_song_image3"
                 android:layout_alignEnd="@+id/recommend_song_image3"
-                android:layout_below="@+id/recommend_song_image3"
-                android:layout_marginTop="25dp"
                 android:layout_marginStart="35dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginEnd="30dp"
                 android:text="267.1万"
                 android:textSize="10sp" />
 
         </RelativeLayout>
+
+
         <RelativeLayout
-            android:id="@+id/recommend_mv_div"
-            android:layout_below="@+id/recommend_singer_div"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recommend_songlist_div"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="10dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="30dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="-15dp">
 
             <TextView
                 android:id="@+id/recommend_mv_title"
@@ -434,145 +499,156 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:text="MV推荐"
-                android:textSize="20sp"
-                android:textColor="@color/colorContent"/>
+                android:textColor="@color/colorContent"
+                android:textSize="20sp" />
 
             <ImageView
                 android:id="@+id/recommend_mv_more"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_alignParentEnd="true"
-                android:layout_alignTop="@+id/recommend_mv_title"
                 android:layout_marginEnd="5dp"
                 app:srcCompat="@drawable/more" />
-
-            <ImageView
-                android:id="@+id/recommend_mv_image1"
-                android:layout_width="193dp"
-                android:layout_height="110dp"
-                android:src="@drawable/mv"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/recommend_mv_title"
-                android:layout_marginTop="15dp"/>
-
-            <ImageView
-                android:id="@+id/recommend_mv_image2"
-                android:layout_width="193dp"
-                android:layout_height="110dp"
-                android:src="@drawable/mv"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@+id/recommend_mv_title"
-                android:layout_marginTop="15dp"/>
-
-            <TextView
-                android:id="@+id/recommend_mv_name1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/recommend_mv_image1"
-                android:layout_below="@+id/recommend_mv_image1"
-                android:layout_marginTop="5dp"
-                android:layout_marginStart="3dp"
-                android:text="Sing Me To Sleep"
-                android:textSize="14sp"
-                android:textColor="@color/colorContent"/>
-
-            <TextView
-                android:id="@+id/recommend_mv_name2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/recommend_mv_image2"
-                android:layout_below="@+id/recommend_mv_image2"
-                android:layout_marginTop="5dp"
-                android:layout_marginStart="3dp"
-                android:text="Sing Me To Sleep"
-                android:textSize="14sp"
-                android:textColor="@color/colorContent"/>
-
-            <TextView
-                android:id="@+id/recommend_mv_creator1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/recommend_mv_image1"
-                android:layout_below="@+id/recommend_mv_image1"
-                android:layout_marginTop="25dp"
-                android:layout_marginStart="3dp"
-                android:text="Alan Walker"
-                android:textSize="10sp" />
-
-            <TextView
-                android:id="@+id/recommend_mv_creator2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/recommend_mv_image2"
-                android:layout_below="@+id/recommend_mv_image2"
-                android:layout_marginTop="25dp"
-                android:layout_marginStart="3dp"
-                android:text="Alan Walker"
-                android:textSize="10sp" />
-
-            <ImageView
-                android:id="@+id/recommend_mv_image3"
-                android:layout_width="193dp"
-                android:layout_height="110dp"
-                android:src="@drawable/mv"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/recommend_mv_title"
-                android:layout_marginTop="175dp"/>
-
-            <ImageView
-                android:id="@+id/recommend_mv_image4"
-                android:layout_width="193dp"
-                android:layout_height="110dp"
-                android:src="@drawable/mv"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@+id/recommend_mv_title"
-                android:layout_marginTop="175dp"/>
-
-            <TextView
-                android:id="@+id/recommend_mv_name3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/recommend_mv_image1"
-                android:layout_below="@+id/recommend_mv_image3"
-                android:layout_marginTop="5dp"
-                android:layout_marginStart="3dp"
-                android:text="Sing Me To Sleep"
-                android:textSize="14sp"
-                android:textColor="@color/colorContent"/>
-
-            <TextView
-                android:id="@+id/recommend_mv_name4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/recommend_mv_image4"
-                android:layout_below="@+id/recommend_mv_image4"
-                android:layout_marginTop="5dp"
-                android:layout_marginStart="3dp"
-                android:text="Sing Me To Sleep"
-                android:textSize="14sp"
-                android:textColor="@color/colorContent"/>
-
-            <TextView
-                android:id="@+id/recommend_mv_creator3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/recommend_mv_image3"
-                android:layout_below="@+id/recommend_mv_image3"
-                android:layout_marginTop="25dp"
-                android:layout_marginStart="3dp"
-                android:text="Alan Walker"
-                android:textSize="10sp" />
-
-            <TextView
-                android:id="@+id/recommend_mv_creator4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/recommend_mv_image4"
-                android:layout_below="@+id/recommend_mv_image4"
-                android:layout_marginTop="25dp"
-                android:layout_marginStart="3dp"
-                android:text="Alan Walker"
-                android:textSize="10sp" />
         </RelativeLayout>
-    </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/recommend_mv_div"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/recommend_mv_image1"
+                    android:layout_width="165dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/mv"/>
+                <TextView
+                    android:id="@+id/recommend_mv_name1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/recommend_mv_image1"
+                    android:layout_alignStart="@+id/recommend_mv_image1"
+                    android:layout_marginStart="3dp"
+                    android:text="Sing Me To Sleep"
+                    android:textColor="@color/colorContent"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/recommend_mv_creator1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/recommend_mv_image1"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Alan Walker"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/recommend_mv_image2"
+                    android:layout_width="165dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/mv" />
+                <TextView
+                    android:id="@+id/recommend_mv_name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/recommend_mv_image2"
+                    android:layout_alignStart="@+id/recommend_mv_image2"
+                    android:layout_marginStart="3dp"
+                    android:text="Sing Me To Sleep"
+                    android:textColor="@color/colorContent"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/recommend_mv_creator2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/recommend_mv_image2"
+                    android:layout_alignStart="@+id/recommend_mv_image2"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Alan Walker"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/recommend_mv_image3"
+                    android:layout_width="165dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/mv" />
+                <TextView
+                    android:id="@+id/recommend_mv_name3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/recommend_mv_image3"
+                    android:layout_marginStart="3dp"
+                    android:text="Sing Me To Sleep"
+                    android:textColor="@color/colorContent"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/recommend_mv_creator3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/recommend_mv_image3"
+                    android:layout_alignStart="@+id/recommend_mv_image3"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Alan Walker"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/recommend_mv_image4"
+                    android:layout_width="165dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/mv" />
+                <TextView
+                    android:id="@+id/recommend_mv_name4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/recommend_mv_image4"
+                    android:layout_alignStart="@+id/recommend_mv_image4"
+                    android:layout_marginStart="3dp"
+                    android:text="Sing Me To Sleep"
+                    android:textColor="@color/colorContent"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/recommend_mv_creator4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/recommend_mv_image4"
+                    android:layout_alignStart="@+id/recommend_mv_image4"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Alan Walker"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
 </ScrollView>

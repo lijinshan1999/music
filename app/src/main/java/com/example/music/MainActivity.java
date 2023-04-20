@@ -96,6 +96,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.iv_title_friend:
                 break;
             case R.id.iv_title_search:
+                Intent intentSearch = new Intent(this,SearchMainActivity.class);
+                startActivity(intentSearch);
+                overridePendingTransition(R.anim.right_slide_in, R.anim.left_slide_out);
                 break;
             case R.id.tv_bottm_player:
                 Intent intent = new Intent(this,PlayerActivity.class);
